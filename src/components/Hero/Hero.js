@@ -6,11 +6,34 @@ import { FaArrowDown } from "react-icons/fa/";
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
 
+  function changeImage() {
+    if (
+      document.getElementById("Wizard1").src ==
+      "https://piskel-imgstore-b.appspot.com/img/7c148d8a-b8c2-11e9-bf50-69f4a3300400.gif"
+    ) {
+      document.getElementById("Wizard1").src =
+        "https://piskel-imgstore-b.appspot.com/img/e83bed28-fa5d-11e9-a25a-c131211bd9ed.gif";
+    } else {
+      document.getElementById("Wizard1").src =
+        "https://piskel-imgstore-b.appspot.com/img/7c148d8a-b8c2-11e9-bf50-69f4a3300400.gif";
+    }
+  }
+
   return (
     <React.Fragment>
       <section className="hero">
         <h1>
-         Hakeem Buchanan <strong><img src="https://piskel-imgstore-b.appspot.com/img/7c148d8a-b8c2-11e9-bf50-69f4a3300400.gif" alt="Hakeem the Wizard" width={60}/></strong> Lv.1 Developer
+          Hakeem Buchanan{" "}
+          <strong>
+            <img
+              src="https://piskel-imgstore-b.appspot.com/img/7c148d8a-b8c2-11e9-bf50-69f4a3300400.gif"
+              alt="Hakeem the Wizard"
+              width={60}
+              id="Wizard1"
+              onClick={changeImage}
+            />
+          </strong>{" "}
+          Lv.1 Developer
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
